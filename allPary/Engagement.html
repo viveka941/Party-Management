@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rent Items for Your Birthday Party</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+  <header>
+    <h1>Rent Decor Items for Your Birthday Party</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="booking.html">Booking</a>
+      <a href="contact.html">Contact</a>
+      <a href="about.html">About</a>
+      <a href="feedback.html">Feedback</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <h2>Available Items for Your Party</h2>
+    <div class="item-list">
+      <!-- Item Cards -->
+<div class="item-card">
+  <img src="https://via.placeholder.com/200" alt="Balloons">
+  <h3>Balloons</h3>
+  <p>Colorful balloons of various sizes and shapes to create a festive atmosphere.</p>
+  <p><strong>$50</strong></p>
+  <button onclick="toggleCart('Balloons', 50, this)">Rent Now</button>
+</div>
+
+<div class="item-card">
+  <img src="https://via.placeholder.com/200" alt="Banners and Streamers">
+  <h3>Banners and Streamers</h3>
+  <p>Customizable banners and streamers to match the engagement theme.</p>
+  <p><strong>$100</strong></p>
+  <button onclick="toggleCart('Banners and Streamers', 100, this)">Rent Now</button>
+</div>
+
+<div class="item-card">
+  <img src="https://via.placeholder.com/200" alt="Tablecloths">
+  <h3>Tablecloths</h3>
+  <p>Elegant tablecloths in colors that complement the theme.</p>
+  <p><strong>$80</strong></p>
+  <button onclick="toggleCart('Tablecloths', 80, this)">Rent Now</button>
+</div>
+
+<div class="item-card">
+  <img src="https://via.placeholder.com/200" alt="Napkins">
+  <h3>Napkins</h3>
+  <p>Cloth or paper napkins that match the tablecloths.</p>
+  <p><strong>$20</strong></p>
+  <button onclick="toggleCart('Napkins', 20, this)">Rent Now</button>
+</div>
+
+<div class="item-card">
+  <img src="https://via.placeholder.com/200" alt="Centerpieces">
+  <h3>Centerpieces</h3>
+  <p>Decorative items like flower arrangements, candles, or themed centerpieces.</p>
+  <p><strong>$150</strong></p>
+  <button onclick="toggleCart('Centerpieces', 150, this)">Rent Now</button>
+</div>
+
+<div class="item-card">
+  <img src="https://via.placeholder.com/200" alt="Fairy Lights">
+  <h3>Fairy Lights</h3>
+  <p>To add a magical touch to the decor.</p>
+  <p><strong>$40</strong></p>
+  <button onclick="toggleCart('Fairy Lights', 40, this)">Rent Now</button>
+</div>
+
+<div class="item-card">
+  <img src="https://via.placeholder.com/200" alt="Appetizers">
+  <h3>Appetizers</h3>
+  <p>Finger foods like cheese and crackers, mini quiches, and shrimp cocktail.</p>
+  <p><strong>$200</strong></p>
+  <button onclick="toggleCart('Appetizers', 200, this)">Rent Now</button>
+</div>
+
+<div class="item-card">
+  <img src="https://via.placeholder.com/200" alt="Main Course">
+  <h3>Main Course</h3>
+  <p>A variety of dishes, including meat, poultry, fish, or vegetarian options.</p>
+  <p><strong>$500</strong></p>
+  <button onclick="toggleCart('Main Course', 500, this)">Rent Now</button>
+</div>
+
+<div class="item-card">
+  <img src="https://via.placeholder.com/200" alt="Dessert">
+  <h3>Dessert</h3>
+  <p>A decadent dessert, such as a cake, cheesecake, or chocolate mousse.</p>
+  <p><strong>$150</strong></p>
+  <button onclick="toggleCart('Dessert', 150, this)">Rent Now</button>
+</div>
+
+<div class="item-card">
+  <img src="https://via.placeholder.com/200" alt="Drinks">
+  <h3>Drinks</h3>
+  <p>Alcoholic and non-alcoholic beverages, such as wine, champagne, beer, soda, and juice.</p>
+  <p><strong>$300</strong></p>
+  <button onclick="toggleCart('Drinks', 300, this)">Rent Now</button>
+</div>
+
+<div class="item-card">
+  <img src="https://via.placeholder.com/200" alt="Ice">
+  <h3>Ice</h3>
+  <p>To keep drinks cold.</p>
+  <p><strong>$50</strong></p>
+  <button onclick="toggleCart('Ice', 50, this)">Rent Now</button>
+</div>
+
+<div class="item-card">
+  <img src="https://via.placeholder.com/200" alt="Glasses and Cutlery">
+  <h3>Glasses and Cutlery</h3>
+  <p>Elegant glassware and silverware.</p>
+  <p><strong>$100</strong></p>
+  <button onclick="toggleCart('Glasses and Cutlery', 100, this)">Rent Now</button>
+</div>
+
+<div class="item-card">
+  <img src="https://via.placeholder.com/200" alt="Music">
+  <h3>Music</h3>
+  <p>A DJ or live band to provide music for dancing and background ambiance.</p>
+  <p><strong>$500</strong></p>
+  <button onclick="toggleCart('Music', 500, this)">Rent Now</button>
+</div>
+
+<div class="item-card">
+  <img src="https://via.placeholder.com/200" alt="Photographer">
+  <h3>Photographer</h3>
+  <p>To capture special moments.</p>
+  <p><strong>$1000</strong></p>
+  <button onclick="toggleCart('Photographer', 1000, this)">Rent Now</button>
+</div>
+
+<div class="item-card">
+  <img src="https://via.placeholder.com/200" alt="Videographer">
+  <h3>Videographer</h3>
+  <p>To record the event on video.</p>
+  <p><strong>$1200</strong></p>
+  <button onclick="toggleCart('Videographer', 1200, this)">Rent Now</button>
+</div>
+
+<div class="item-card">
+  <img src="https://via.placeholder.com/200" alt="Invitations">
+  <h3>Invitations</h3>
+  <p>To invite guests.</p>
+  <p><strong>$100</strong></p>
+  <button onclick="toggleCart('Invitations', 100, this)">Rent Now</button>
+</div>
+
+<div class="item-card">
+  <img src="https://via.placeholder.com/200" alt="Guest Book">
+  <h3>Guest Book</h3>
+  <p>For guests to write messages.</p>
+  <p><strong>$50</strong></p>
+  <button onclick="toggleCart('Guest Book', 50, this)">Rent Now</button>
+</div>
+
+<div class="item-card">
+  <img src="https://via.placeholder.com/200" alt="Place Cards">
+  <h3>Place Cards</h3>
+  <p>To assign seating arrangements.</p>
+  <p><strong>$20</strong></p>
+  <button onclick="toggleCart('Place Cards', 20, this)">Rent Now</button>
+</div>
+
+<div class="item-card">
+  <img src="https://via.placeholder.com/200" alt="Engagement Ring">
+  <h3>Engagement Ring</h3>
+  <p>The centerpiece of the celebration!</p>
+  <p><strong>$3000</strong></p>
+  <button onclick="toggleCart('Engagement Ring', 3000, this)">Rent Now</button>
+</div>
+
+<div class="item-card">
+  <img src="https://via.placeholder.com/200" alt="Party Favors">
+  <h3>Party Favors</h3>
+  <p>Small gifts for guests to take home.</p>
+  <p><strong>$150</strong></p>
+  <button onclick="toggleCart('Party Favors', 150, this)">Rent Now</button>
+</div>
+
+<div class="item-card">
+  <img src="https://via.placeholder.com/200" alt="Cake and Dessert">
+  <h3>Cake and Dessert</h3>
+  <p>A celebratory cake or dessert.</p>
+  <p><strong>$400</strong></p>
+  <button onclick="toggleCart('Cake and Dessert', 400, this)">Rent Now</button>
+</div>
+
+<div class="item-card">
+  <img src="https://via.placeholder.com/200" alt="Cleaning Supplies">
+  <h3>Cleaning Supplies</h3>
+  <p>To clean up after the party.</p>
+  <p><strong>$50</strong></p>
+  <button onclick="toggleCart('Cleaning Supplies', 50, this)">Rent Now</button>
+</div>
+
+
+      <!-- More Item Cards Here -->
+      <!-- Add more items similarly -->
+
+    </div>
+
+    <div class="total-card">
+      <h3>Total Summary</h3>
+      <p><strong>Total Items: <span id="totalItems">0</span></strong></p>
+      <p><strong>Total Price: $<span id="totalPrice">0</span></strong></p>
+      <div class="buttons">
+        <button id="submitBtn" onclick="submitCart()" disabled>Submit</button>
+        <button id="updateBtn" onclick="updateCart()">Update</button>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2024 Rent Out Decor Items for Parties</p>
+  </footer>
+
+  <script>
+    let totalItems = 0;
+    let totalPrice = 0;
+    const cartItems = [];
+
+    function toggleCart(name, price, button) {
+      const isSelected = button.classList.contains('selected');
+
+      if (isSelected) {
+        totalItems--;
+        totalPrice -= price;
+        cartItems.splice(cartItems.findIndex(item => item.name === name), 1);
+        button.classList.remove('selected');
+        button.innerHTML = "Rent Now";
+      } else {
+        totalItems++;
+        totalPrice += price;
+        cartItems.push({ name, price });
+        button.classList.add('selected');
+        button.innerHTML = "Remove from Cart";
+      }
+
+      document.getElementById('totalItems').textContent = totalItems;
+      document.getElementById('totalPrice').textContent = totalPrice;
+      document.getElementById('submitBtn').disabled = totalItems === 0;
+    }
+
+    function submitCart() {
+      localStorage.setItem('cartItems', JSON.stringify(cartItems));
+      window.location.href = '/show.html'; // Redirect to the show page
+    }
+
+    function updateCart() {
+      totalItems = 0;
+      totalPrice = 0;
+      cartItems.length = 0;
+      document.getElementById('totalItems').textContent = totalItems;
+      document.getElementById('totalPrice').textContent = totalPrice;
+
+      const buttons = document.querySelectorAll('.item-card button');
+      buttons.forEach(button => {
+        button.classList.remove('selected');
+        button.innerHTML = "Rent Now";
+      });
+
+      document.getElementById('submitBtn').disabled = true;
+    }
+  </script>
+
+</body>
+
+</html>

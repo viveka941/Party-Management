@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rent Items for Your Birthday Party</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+    <h1>Rent Decor Items for Your Birthday Party</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="booking.html">Booking</a>
+      <a href="contact.html">Contact</a>
+      <a href="about.html">About</a>
+      <a href="feedback.html">Feedback</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <h2>Available Items for Your Party</h2>
+    <div class="item-list">
+      <!-- Item Cards -->
+    <div class="item-card">
+      <img src="./images/balloons.jpg" alt="Balloons">
+      <h3>Balloons</h3>
+      <p>Colorful balloons of various sizes and shapes to create festive ambiance.</p>
+      <p><strong>₹30</strong></p>
+      <button onclick="toggleCart('Balloons', 30, this)">Rent Now</button>
+    </div>
+    
+    <div class="item-card">
+      <img src="./images/banners.jpg" alt="Banners and Streamers">
+      <h3>Banners and Streamers</h3>
+      <p>Customizable banners and streamers to match the party theme.</p>
+      <p><strong>₹25</strong></p>
+      <button onclick="toggleCart('Banners and Streamers', 25, this)">Rent Now</button>
+    </div>
+    
+    <div class="item-card">
+      <img src="./images/tableCloths.jpg" alt="Tablecloths">
+      <h3>Tablecloths</h3>
+      <p>Tablecloths in various colors and patterns to cover tables.</p>
+      <p><strong>₹15</strong></p>
+      <button onclick="toggleCart('Tablecloths', 15, this)">Rent Now</button>
+    </div>
+    
+    <div class="item-card">
+      <img src="./images/napkins.jpg" alt="Napkins">
+      <h3>Napkins</h3>
+      <p>Paper or cloth napkins to match the theme.</p>
+      <p><strong>₹10</strong></p>
+      <button onclick="toggleCart('Napkins', 10, this)">Rent Now</button>
+    </div>
+    
+    <div class="item-card">
+      <img src="./images/centerpices.jpg" alt="Centerpieces">
+      <h3>Centerpieces</h3>
+      <p>Decorative items like flower arrangements, candles, or themed centerpieces.</p>
+      <p><strong>₹40</strong></p>
+      <button onclick="toggleCart('Centerpieces', 40, this)">Rent Now</button>
+    </div>
+    
+    <div class="item-card">
+      <img src="./images/Party Hats.jpg" alt="Party Hats">
+      <h3>Party Hats</h3>
+      <p>Colorful party hats for guests to wear.</p>
+      <p><strong>₹5</strong></p>
+      <button onclick="toggleCart('Party Hats', 5, this)">Rent Now</button>
+    </div>
+    
+    <div class="item-card">
+      <img src="./images/Confetti.jpg" alt="Confetti">
+      <h3>Confetti</h3>
+      <p>Colorful confetti to add a festive touch.</p>
+      <p><strong>₹8</strong></p>
+      <button onclick="toggleCart('Confetti', 8, this)">Rent Now</button>
+    </div>
+    
+    <div class="item-card">
+      <img src="./images/PartyFavors.jpg" alt="Party Favors">
+      <h3>Party Favors</h3>
+      <p>Small gifts or toys to give to guests as a token of appreciation.</p>
+      <p><strong>₹12</strong></p>
+      <button onclick="toggleCart('Party Favors', 12, this)">Rent Now</button>
+    </div>
+    
+    <!-- Food and Drinks -->
+    <div class="item-card">
+      <img src="./images/cake.jpg" alt="Cake">
+      <h3>Cake</h3>
+      <p>A birthday cake, customized with the birthday person's name and age.</p>
+      <p><strong>₹60</strong></p>
+      <button onclick="toggleCart('Cake', 60, this)">Rent Now</button>
+    </div>
+    
+    <div class="item-card">
+      <img src="./images/cupCake.jpg" alt="Cupcakes">
+      <h3>Cupcakes</h3>
+      <p>Smaller, individual cakes, often decorated with frosting and sprinkles.</p>
+      <p><strong>₹20</strong></p>
+      <button onclick="toggleCart('Cupcakes', 20, this)">Rent Now</button>
+    </div>
+    
+    <div class="item-card">
+      <img src="./images/cookies.jpg" alt="Cookies">
+      <h3>Cookies</h3>
+      <p>Assorted cookies, including sugar cookies, chocolate chip cookies, and themed cookies.</p>
+      <p><strong>₹15</strong></p>
+      <button onclick="toggleCart('Cookies', 15, this)">Rent Now</button>
+    </div>
+    
+    <div class="item-card">
+      <img src="./images/Chips.jpg" alt="Chips">
+      <h3>Chips</h3>
+      <p>A variety of chips to satisfy salty cravings.</p>
+      <p><strong>₹10</strong></p>
+      <button onclick="toggleCart('Chips', 10, this)">Rent Now</button>
+    </div>
+    
+    <div class="item-card">
+      <img src="./images/pizza.jpg" alt="Pizza">
+      <h3>Pizza</h3>
+      <p>A classic party food, especially popular with kids.</p>
+      <p><strong>₹50</strong></p>
+      <button onclick="toggleCart('Pizza', 50, this)">Rent Now</button>
+    </div>
+    
+    <div class="item-card">
+      <img src="./images/Sandwiches.jpg" alt="Sandwiches">
+      <h3>Sandwiches</h3>
+      <p>Pre-made sandwiches or sandwich platters.</p>
+      <p><strong>₹30</strong></p>
+      <button onclick="toggleCart('Sandwiches', 30, this)">Rent Now</button>
+    </div>
+    
+    <div class="item-card">
+      <img src="./images/FruitPlatter.jpg" alt="Fruit Platter">
+      <h3>Fruit Platter</h3>
+      <p>A healthy and refreshing option.</p>
+      <p><strong>₹25</strong></p>
+      <button onclick="toggleCart('Fruit Platter', 25, this)">Rent Now</button>
+    </div>
+    
+    <div class="item-card">
+      <img src="./images/VeggiePlatter.jpg" alt="Veggie Platter">
+      <h3>Veggie Platter</h3>
+      <p>A variety of fresh vegetables with dip.</p>
+      <p><strong>₹20</strong></p>
+      <button onclick="toggleCart('Veggie Platter', 20, this)">Rent Now</button>
+    </div>
+    
+    <div class="item-card">
+      <img src="./images/Drinks.jpg" alt="Drinks">
+      <h3>Drinks</h3>
+      <p>Soda, juice, water, and other beverages.</p>
+      <p><strong>₹15</strong></p>
+      <button onclick="toggleCart('Drinks', 15, this)">Rent Now</button>
+    </div>
+    
+    <div class="item-card">
+      <img src="./images/Ice.jpg" alt="Ice">
+      <h3>Ice</h3>
+      <p>To keep drinks cold.</p>
+      <p><strong>₹5</strong></p>
+      <button onclick="toggleCart('Ice', 5, this)">Rent Now</button>
+    </div>
+    
+    <div class="item-card">
+      <img src="./images/CupsandPlates.jpg" alt="Cups and Plates">
+      <h3>Cups and Plates</h3>
+      <p>Disposable or reusable cups and plates.</p>
+      <p><strong>₹12</strong></p>
+      <button onclick="toggleCart('Cups and Plates', 12, this)">Rent Now</button>
+    </div>
+    
+    <!-- Entertainment -->
+    <div class="item-card">
+      <img src="./images/MusicSystem.jpg" alt="Music System">
+      <h3>Music System</h3>
+      <p>A sound system to play music.</p>
+      <p><strong>₹40</strong></p>
+      <button onclick="toggleCart('Music System', 40, this)">Rent Now</button>
+    </div>
+    
+    <div class="item-card">
+      <img src="./images/game.jpg" alt="Games">
+      <h3>Games</h3>
+      <p>Board games, card games, or outdoor games.</p>
+      <p><strong>₹25</strong></p>
+      <button onclick="toggleCart('Games', 25, this)">Rent Now</button>
+    </div>
+    
+    <div class="item-card">
+      <img src="./images/partyGame.jpg" alt="Party Games">
+      <h3>Party Games</h3>
+      <p>Fun and interactive games like charades, Pictionary, or treasure hunts.</p>
+      <p><strong>₹30</strong></p>
+      <button onclick="toggleCart('Party Games', 30, this)">Rent Now</button>
+    </div>
+    
+    <div class="item-card">
+      <img src="./images/Prizes.jpg" alt="Prizes">
+      <h3>Prizes</h3>
+      <p>Small prizes for game winners or as party favors.</p>
+      <p><strong>₹10</strong></p>
+      <button onclick="toggleCart('Prizes', 10, this)">Rent Now</button>
+    </div>
+    
+    <!-- Other Essentials -->
+    <div class="item-card">
+      <img src="./images/Candles.jpg" alt="Candles">
+      <h3>Candles</h3>
+      <p>To place on the birthday cake.</p>
+      <p><strong>₹5</strong></p>
+      <button onclick="toggleCart('Candles', 5, this)">Rent Now</button>
+    </div>
+    
+    <div class="item-card">
+      <img src="./images/MatchesorLighter.jpg" alt="Matches or Lighter">
+      <h3>Matches or Lighter</h3>
+      <p>To light the candles.</p>
+      <p><strong>₹2</strong></p>
+      <button onclick="toggleCart('Matches or Lighter', 2, this)">Rent Now</button>
+    </div>
+    
+    <div class="item-card">
+      <img src="./images/ServingPlattersandUtensils.jpg" alt="Serving Platters and Utensils">
+      <h3>Serving Platters and Utensils</h3>
+      <p>To serve food and drinks.</p>
+      <p><strong>₹15</strong></p>
+      <button onclick="toggleCart('Serving Platters and Utensils', 15, this)">Rent Now</button>
+    </div>
+    
+    <div class="item-card">
+      <img src="./images/TrashBags.jpg" alt="Trash Bags">
+      <h3>Trash Bags</h3>
+      <p>For waste disposal.</p>
+      <p><strong>₹5</strong></p>
+      <button onclick="toggleCart('Trash Bags', 5, this)">Rent Now</button>
+    </div>
+    
+    <div class="item-card">
+      <img src="./images/CleaningSupplies.jpg" alt="Cleaning Supplies">
+      <h3>Cleaning Supplies</h3>
+      <p>To clean up after the party.</p>
+      <p><strong>₹10</strong></p>
+      <button onclick="toggleCart('Cleaning Supplies', 10, this)">Rent Now</button>
+    </div>
+    
+    <div class="item-card">
+      <img src="./images/First-AidKit.jpg" alt="First-Aid Kit">
+      <h3>First-Aid Kit</h3>
+      <p>A basic first-aid kit for minor injuries.</p>
+      <p><strong>₹20</strong></p>
+      <button onclick="toggleCart('First-Aid Kit', 20, this)">Rent Now</button>
+    </div>
+
+
+
+      <!-- More Item Cards Here -->
+      <!-- Add more items similarly -->
+
+    </div>
+
+    <div class="total-card">
+      <h3>Total Summary</h3>
+      <p><strong>Total Items: <span id="totalItems">0</span></strong></p>
+      <p><strong>Total Price: ₹<span id="totalPrice">0</span></strong></p>
+      <div class="buttons">
+        <button id="submitBtn" onclick="submitCart()" disabled>Submit</button>
+        <button id="updateBtn" onclick="updateCart()">Update</button>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2024 Rent Out Decor Items for Parties</p>
+  </footer>
+
+  <script>
+    let totalItems = 0;
+    let totalPrice = 0;
+    const cartItems = [];
+
+    function toggleCart(name, price, button) {
+      const isSelected = button.classList.contains('selected');
+
+      if (isSelected) {
+        totalItems--;
+        totalPrice -= price;
+        cartItems.splice(cartItems.findIndex(item => item.name === name), 1);
+        button.classList.remove('selected');
+        button.innerHTML = "Rent Now";
+      } else {
+        totalItems++;
+        totalPrice += price;
+        cartItems.push({ name, price });
+        button.classList.add('selected');
+        button.innerHTML = "Remove from Cart";
+      }
+
+      document.getElementById('totalItems').textContent = totalItems;
+      document.getElementById('totalPrice').textContent = totalPrice;
+      document.getElementById('submitBtn').disabled = totalItems === 0;
+    }
+
+    function submitCart() {
+      localStorage.setItem('cartItems', JSON.stringify(cartItems));
+      window.location.href = 'show.html'; 
+    }
+
+    function updateCart() {
+      totalItems = 0;
+      totalPrice = 0;
+      cartItems.length = 0;
+      document.getElementById('totalItems').textContent = totalItems;
+      document.getElementById('totalPrice').textContent = totalPrice;
+
+      const buttons = document.querySelectorAll('.item-card button');
+      buttons.forEach(button => {
+        button.classList.remove('selected');
+        button.innerHTML = "Rent Now";
+      });
+
+      document.getElementById('submitBtn').disabled = true;
+    }
+  </script>
+
+</body>
+
+</html>

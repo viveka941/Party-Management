@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Review Your Cart and Pay</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Styles remain the same */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 15px;
+      font-size: 18px;
+    }
+
+    .container {
+      width: 80%;
+      margin: 20px auto;
+    }
+
+    .total-card,
+    .payment-card {
+      background-color: #fff;
+      padding: 20px;
+      margin-top: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .total-card h3,
+    .payment-card h3 {
+      margin-top: 0;
+      font-size: 24px;
+    }
+
+    .item-card {
+      display: flex;
+      justify-content: space-between;
+      padding: 10px;
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      margin-bottom: 10px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .item-card h3 {
+      margin: 0;
+      font-size: 18px;
+    }
+
+    .item-card p {
+      margin: 5px 0;
+    }
+
+    .item-card .price {
+      font-weight: bold;
+    }
+
+    .quantity-input {
+      width: 50px;
+      padding: 5px;
+    }
+
+    .payment-card input {
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+      margin: 10px 0;
+      border-radius: 5px;
+      border: 1px solid #ddd;
+    }
+
+    .payment-card button {
+      background-color: #28a745;
+      color: white;
+      padding: 12px 20px;
+      font-size: 16px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      width: 100%;
+      transition: background-color 0.3s;
+    }
+
+    .payment-card button:hover {
+      background-color: #218838;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px 0;
+      background-color: #333;
+      color: #fff;
+      margin-top: 40px;
+    }
+
+    .delete-button {
+      background-color: #dc3545;
+      color: white;
+      border: none;
+      padding: 5px 10px;
+      cursor: pointer;
+      border-radius: 5px;
+      font-size: 14px;
+    }
+
+    .delete-button:hover {
+      background-color: #c82333;
+    }
+    h3{
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Your Cart</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="booking.html">Booking</a>
+      <a href="contact.html">Contact</a>
+      <a href="about.html">About</a>
+      <a href="feedback.html">Feedback</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <h2>Your Selected Items</h2>
+    <div id="cartItemsList"></div>
+
+    <div class="total-card">
+      <h3>Total Summary</h3>
+      <p><strong>Total Quantity: <span id="totalQuantity">0</span></strong></p>
+      <p><strong>Total Items: <span id="totalItems">0</span></strong></p>
+      <p><strong>Total Price: ₹<span id="totalPrice">0</span></strong></p>
+    </div>
+
+    <div class="payment-card">
+      <h3>Booking Date</h3>
+      <form id="paymentForm">
+        <label for="startDate">Start Date</label>
+        <input type="date" id="startDate" required>
+
+        <label for="endDate">End Date</label>
+        <input type="date" id="endDate" required>
+        <h3> Payment</h3>
+        <p><strong>Total Days: <span id="totalDays">0</span></strong></p>
+        <p><strong>Amount to Pay: ₹<span id="finalAmount">0</span></strong></p>
+        <button type="submit">Proceed to Pay</button>
+      </form>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2024 Rent Out Decor Items for Parties</p>
+  </footer>
+
+  <script>
+    const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+    let totalItems = 0;
+    let totalQuantity = 0;
+    let totalPrice = 0;
+
+    const cartItemsList = document.getElementById('cartItemsList');
+    const totalItemsElement = document.getElementById('totalItems');
+    const totalQuantityElement = document.getElementById('totalQuantity');
+    const totalPriceElement = document.getElementById('totalPrice');
+
+    function updateCart() {
+      cartItemsList.innerHTML = ''; 
+      totalItems = 0;
+      totalQuantity = 0;
+      totalPrice = 0;
+
+      cartItems.forEach((item, index) => {
+        const itemDiv = document.createElement('div');
+        itemDiv.classList.add('item-card');
+        itemDiv.innerHTML = `
+          <h3>${item.name}</h3>
+          <p class="price">₹${item.price}  </p>
+          <input type="number" class="quantity-input" min="1" value="${item.quantity || 1}" onchange="updateQuantity(${index}, this.value)">
+          <p>quantity</p>
+          <button class="delete-button" onclick="deleteItem(${index})">Delete</button>
+        `;
+        cartItemsList.appendChild(itemDiv);
+
+        totalItems++;
+        totalQuantity += item.quantity || 1;
+        totalPrice += (item.price * (item.quantity || 1));
+      });
+
+      totalItemsElement.textContent = totalItems;
+      totalQuantityElement.textContent = totalQuantity;
+      totalPriceElement.textContent = totalPrice;
+      document.getElementById('paymentAmount').value = `₹${totalPrice}`;
+      calculateTotalDays(); 
+    }
+
+    function updateQuantity(index, quantity) {
+      quantity = parseInt(quantity) || 1;
+      cartItems[index].quantity = quantity;
+      localStorage.setItem('cartItems', JSON.stringify(cartItems));
+      updateCart();
+    }
+
+    function deleteItem(index) {
+      cartItems.splice(index, 1);
+      localStorage.setItem('cartItems', JSON.stringify(cartItems));
+      updateCart();
+    }
+
+    function calculateTotalDays() {
+      const startDate = new Date(document.getElementById('startDate').value);
+      const endDate = new Date(document.getElementById('endDate').value);
+      const totalDaysElement = document.getElementById('totalDays');
+      const finalAmountElement = document.getElementById('finalAmount');
+
+      if (startDate && endDate && endDate >= startDate) {
+        const timeDifference = endDate - startDate;
+        const totalDays = timeDifference / (1000 * 3600 * 24) + 1;
+        totalDaysElement.textContent = totalDays;
+        finalAmountElement.textContent = (totalPrice * totalDays).toFixed(2);
+      } else {
+        totalDaysElement.textContent = 0;
+        finalAmountElement.textContent = 0;
+      }
+    }
+
+    document.getElementById('startDate').addEventListener('change', calculateTotalDays);
+    document.getElementById('endDate').addEventListener('change', calculateTotalDays);
+
+    document.getElementById('paymentForm').addEventListener('submit', function (event) {
+      event.preventDefault();
+
+     
+      const paymentData = {
+        cartItems: cartItems,
+        totalPrice: totalPrice,
+        startDate: document.getElementById('startDate').value,
+        endDate: document.getElementById('endDate').value,
+        totalDays: document.getElementById('totalDays').textContent,
+        finalAmount: document.getElementById('finalAmount').textContent
+      };
+
+     
+      localStorage.setItem('paymentData', JSON.stringify(paymentData));
+
+
+      alert("Payment successful! You will now be redirected to the receipt page.");
+      window.location.href = "receipt.html"; 
+    });
+
+   
+    updateCart();
+  </script>
+</body>
+
+</html>

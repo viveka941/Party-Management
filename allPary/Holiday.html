@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rent Items for Your Birthday Party</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+  <header>
+    <h1>Rent Decor Items for Your Birthday Party</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="booking.html">Booking</a>
+      <a href="contact.html">Contact</a>
+      <a href="about.html">About</a>
+      <a href="feedback.html">Feedback</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <h2>Available Items for Your Party</h2>
+    <div class="item-list">
+      <!-- Item Cards -->
+  <div class="item-card">
+    <img src="https://via.placeholder.com/200" alt="Christmas Tree">
+    <h3>Christmas Tree</h3>
+    <p>A centerpiece for your holiday decor.</p>
+    <p><strong>$200</strong></p>
+    <button onclick="toggleCart('Christmas Tree', 200, this)">Rent Now</button>
+  </div>
+  
+  <div class="item-card">
+    <img src="https://via.placeholder.com/200" alt="Ornaments">
+    <h3>Ornaments</h3>
+    <p>Colorful ornaments to adorn the tree.</p>
+    <p><strong>$50</strong></p>
+    <button onclick="toggleCart('Ornaments', 50, this)">Rent Now</button>
+  </div>
+  
+  <div class="item-card">
+    <img src="https://via.placeholder.com/200" alt="Lights">
+    <h3>Lights</h3>
+    <p>String lights to illuminate the tree and other areas.</p>
+    <p><strong>$30</strong></p>
+    <button onclick="toggleCart('Lights', 30, this)">Rent Now</button>
+  </div>
+  
+  <div class="item-card">
+    <img src="https://via.placeholder.com/200" alt="Wreaths">
+    <h3>Wreaths</h3>
+    <p>Decorative wreaths for doors and walls.</p>
+    <p><strong>$40</strong></p>
+    <button onclick="toggleCart('Wreaths', 40, this)">Rent Now</button>
+  </div>
+  
+  <div class="item-card">
+    <img src="https://via.placeholder.com/200" alt="Garland">
+    <h3>Garland</h3>
+    <p>Garland to decorate mantles, railings, and tables.</p>
+    <p><strong>$25</strong></p>
+    <button onclick="toggleCart('Garland', 25, this)">Rent Now</button>
+  </div>
+  
+  <div class="item-card">
+    <img src="https://via.placeholder.com/200" alt="Tablecloth">
+    <h3>Tablecloth</h3>
+    <p>A festive tablecloth to cover tables.</p>
+    <p><strong>$30</strong></p>
+    <button onclick="toggleCart('Tablecloth', 30, this)">Rent Now</button>
+  </div>
+  
+  <div class="item-card">
+    <img src="https://via.placeholder.com/200" alt="Napkins">
+    <h3>Napkins</h3>
+    <p>Festive napkins to match the tablecloth.</p>
+    <p><strong>$20</strong></p>
+    <button onclick="toggleCart('Napkins', 20, this)">Rent Now</button>
+  </div>
+  
+  <div class="item-card">
+    <img src="https://via.placeholder.com/200" alt="Centerpieces">
+    <h3>Centerpieces</h3>
+    <p>Decorative centerpieces, such as candles, flowers, or holiday-themed items.</p>
+    <p><strong>$50</strong></p>
+    <button onclick="toggleCart('Centerpieces', 50, this)">Rent Now</button>
+  </div>
+  
+  <div class="item-card">
+    <img src="https://via.placeholder.com/200" alt="Appetizers">
+    <h3>Appetizers</h3>
+    <p>Finger foods like cheese and crackers, mini quiches, and shrimp cocktail.</p>
+    <p><strong>$100</strong></p>
+    <button onclick="toggleCart('Appetizers', 100, this)">Rent Now</button>
+  </div>
+  
+  <div class="item-card">
+    <img src="https://via.placeholder.com/200" alt="Main Course">
+    <h3>Main Course</h3>
+    <p>A variety of dishes, including roasted turkey, ham, or vegetarian options.</p>
+    <p><strong>$300</strong></p>
+    <button onclick="toggleCart('Main Course', 300, this)">Rent Now</button>
+  </div>
+  
+  <div class="item-card">
+    <img src="https://via.placeholder.com/200" alt="Side Dishes">
+    <h3>Side Dishes</h3>
+    <p>Mashed potatoes, stuffing, cranberry sauce, and green bean casserole.</p>
+    <p><strong>$150</strong></p>
+    <button onclick="toggleCart('Side Dishes', 150, this)">Rent Now</button>
+  </div>
+  
+  <div class="item-card">
+    <img src="https://via.placeholder.com/200" alt="Dessert">
+    <h3>Dessert</h3>
+    <p>Holiday desserts like pumpkin pie, apple pie, or Christmas cookies.</p>
+    <p><strong>$80</strong></p>
+    <button onclick="toggleCart('Dessert', 80, this)">Rent Now</button>
+  </div>
+  
+  <div class="item-card">
+    <img src="https://via.placeholder.com/200" alt="Drinks">
+    <h3>Drinks</h3>
+    <p>Hot chocolate, eggnog, wine, beer, and other beverages.</p>
+    <p><strong>$100</strong></p>
+    <button onclick="toggleCart('Drinks', 100, this)">Rent Now</button>
+  </div>
+  
+  <div class="item-card">
+    <img src="https://via.placeholder.com/200" alt="Music">
+    <h3>Music</h3>
+    <p>Holiday music, either played from a device or by a live musician.</p>
+    <p><strong>$150</strong></p>
+    <button onclick="toggleCart('Music', 150, this)">Rent Now</button>
+  </div>
+  
+  <div class="item-card">
+    <img src="https://via.placeholder.com/200" alt="Board Games">
+    <h3>Board Games</h3>
+    <p>Classic board games like Monopoly, Scrabble, or Cards Against Humanity.</p>
+    <p><strong>$30</strong></p>
+    <button onclick="toggleCart('Board Games', 30, this)">Rent Now</button>
+  </div>
+  
+  <div class="item-card">
+    <img src="https://via.placeholder.com/200" alt="Party Games">
+    <h3>Party Games</h3>
+    <p>Holiday-themed games like charades or gift exchange.</p>
+    <p><strong>$40</strong></p>
+    <button onclick="toggleCart('Party Games', 40, this)">Rent Now</button>
+  </div>
+  
+  <div class="item-card">
+    <img src="https://via.placeholder.com/200" alt="Movie Night">
+    <h3>Movie Night</h3>
+    <p>A selection of holiday movies to watch.</p>
+    <p><strong>$60</strong></p>
+    <button onclick="toggleCart('Movie Night', 60, this)">Rent Now</button>
+  </div>
+  
+  <div class="item-card">
+    <img src="https://via.placeholder.com/200" alt="Invitations">
+    <h3>Invitations</h3>
+    <p>To invite guests.</p>
+    <p><strong>$30</strong></p>
+    <button onclick="toggleCart('Invitations', 30, this)">Rent Now</button>
+  </div>
+  
+  <div class="item-card">
+    <img src="https://via.placeholder.com/200" alt="Gift Wrap and Tags">
+    <h3>Gift Wrap and Tags</h3>
+    <p>For wrapping gifts.</p>
+    <p><strong>$25</strong></p>
+    <button onclick="toggleCart('Gift Wrap and Tags', 25, this)">Rent Now</button>
+  </div>
+  
+  <div class="item-card">
+    <img src="https://via.placeholder.com/200" alt="Gift Bags">
+    <h3>Gift Bags</h3>
+    <p>For smaller gifts.</p>
+    <p><strong>$15</strong></p>
+    <button onclick="toggleCart('Gift Bags', 15, this)">Rent Now</button>
+  </div>
+  
+  <div class="item-card">
+    <img src="https://via.placeholder.com/200" alt="Party Hats">
+    <h3>Party Hats</h3>
+    <p>Festive hats to wear.</p>
+    <p><strong>$10</strong></p>
+    <button onclick="toggleCart('Party Hats', 10, this)">Rent Now</button>
+  </div>
+  
+  <div class="item-card">
+    <img src="https://via.placeholder.com/200" alt="Cleaning Supplies">
+    <h3>Cleaning Supplies</h3>
+    <p>To clean up after the party.</p>
+    <p><strong>$40</strong></p>
+    <button onclick="toggleCart('Cleaning Supplies', 40, this)">Rent Now</button>
+  </div>
+
+
+      <!-- More Item Cards Here -->
+      <!-- Add more items similarly -->
+
+    </div>
+
+    <div class="total-card">
+      <h3>Total Summary</h3>
+      <p><strong>Total Items: <span id="totalItems">0</span></strong></p>
+      <p><strong>Total Price: $<span id="totalPrice">0</span></strong></p>
+      <div class="buttons">
+        <button id="submitBtn" onclick="submitCart()" disabled>Submit</button>
+        <button id="updateBtn" onclick="updateCart()">Update</button>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2024 Rent Out Decor Items for Parties</p>
+  </footer>
+
+  <script>
+    let totalItems = 0;
+    let totalPrice = 0;
+    const cartItems = [];
+
+    function toggleCart(name, price, button) {
+      const isSelected = button.classList.contains('selected');
+
+      if (isSelected) {
+        totalItems--;
+        totalPrice -= price;
+        cartItems.splice(cartItems.findIndex(item => item.name === name), 1);
+        button.classList.remove('selected');
+        button.innerHTML = "Rent Now";
+      } else {
+        totalItems++;
+        totalPrice += price;
+        cartItems.push({ name, price });
+        button.classList.add('selected');
+        button.innerHTML = "Remove from Cart";
+      }
+
+      document.getElementById('totalItems').textContent = totalItems;
+      document.getElementById('totalPrice').textContent = totalPrice;
+      document.getElementById('submitBtn').disabled = totalItems === 0;
+    }
+
+    function submitCart() {
+      localStorage.setItem('cartItems', JSON.stringify(cartItems));
+      window.location.href = '/show.html'; // Redirect to the show page
+    }
+
+    function updateCart() {
+      totalItems = 0;
+      totalPrice = 0;
+      cartItems.length = 0;
+      document.getElementById('totalItems').textContent = totalItems;
+      document.getElementById('totalPrice').textContent = totalPrice;
+
+      const buttons = document.querySelectorAll('.item-card button');
+      buttons.forEach(button => {
+        button.classList.remove('selected');
+        button.innerHTML = "Rent Now";
+      });
+
+      document.getElementById('submitBtn').disabled = true;
+    }
+  </script>
+
+</body>
+
+</html>

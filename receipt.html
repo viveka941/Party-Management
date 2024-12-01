@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Receipt</title>
+  <style>
+   
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    .receipt-container {
+      width: 80%;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: #f9f9f9;
+      border-radius: 8px;
+    }
+
+    .receipt-container h2 {
+      text-align: center;
+    }
+
+    table {
+      width: 100%;
+      margin-top: 20px;
+      border-collapse: collapse;
+    }
+
+    table,
+    th,
+    td {
+      border: 1px solid #ddd;
+    }
+
+    th,
+    td {
+      padding: 12px;
+      text-align: left;
+    }
+
+    th {
+      background-color: #f2f2f2;
+    }
+
+    .total-summary {
+      margin-top: 20px;
+      text-align: right;
+    }
+
+    .total-summary p {
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    button {
+      background-color: #28a745;
+      color: white;
+      padding: 12px 20px;
+      font-size: 16px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      width: 100%;
+      transition: background-color 0.3s;
+      margin-top: 20px;
+    }
+
+    button:hover {
+      background-color: #218838;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="receipt-container">
+    <h2>Order Receipt</h2>
+
+    <!-- Table for item details -->
+    <table>
+      <thead>
+        <tr>
+          <th>Item</th>
+          <th>Start Date</th>
+          <th>Days Rented</th>
+          <th>Price per Day</th>
+          <th>Total</th>
+        </tr>
+      </thead>
+      <tbody id="receiptItems"></tbody>
+    </table>
+
+    <div class="total-summary">
+      <p><strong>Total Days:</strong> <span id="receiptTotalDays"></span></p>
+      <p><strong>Total Amount Paid:</strong> $<span id="receiptFinalAmount"></span></p>
+    </div>
+
+    <button onclick="window.print()">Print Receipt</button>
+  </div>
+
+  <script>
+   
+    const paymentData = JSON.parse(localStorage.getItem('paymentData')) || {};
+    const cartItems = paymentData.cartItems || [];
+    const receiptItemsContainer = document.getElementById('receiptItems');
+    let totalDays = 0;
+    let totalPrice = 0;
+
+   
+    cartItems.forEach(item => {
+      const startDate = new Date(paymentData.startDate);
+      const endDate = new Date(paymentData.endDate);
+      const daysRented = (endDate - startDate) / (1000 * 3600 * 24) + 1;
+      const itemTotalPrice = item.price * daysRented;
+
+      totalDays += daysRented;
+      totalPrice += itemTotalPrice;
+
+      const row = document.createElement('tr');
+      row.innerHTML = `
+        <td>${item.name}</td>
+        <td>${paymentData.startDate}</td>
+        <td>${daysRented}</td>
+        <td>$${item.price} per day</td>
+        <td>$${itemTotalPrice.toFixed(2)}</td>
+      `;
+      receiptItemsContainer.appendChild(row);
+    });
+
+   
+    document.getElementById('receiptTotalDays').textContent = totalDays;
+    document.getElementById('receiptFinalAmount').textContent = totalPrice.toFixed(2);
+  </script>
+</body>
+
+</html>
